@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jervil Angelo De Leon | Portfolio</title>
+<meta name="description" content="Portfolio of Jervil Angelo De Leon: HRIS L1 support, working toward a career as a cloud engineer.">
+<style>
+  :root {
+    --paper: #eef2f4;
+    --ink: #14243a;
+    --muted: #4d5d70;
+    --line: #b9c6d1;
+    --accent: #c2410c;
+    --panel: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #0f1a28;
+      --ink: #e6edf3;
+      --muted: #9fb0c1;
+      --line: #2b3d52;
+      --accent: #f59e5b;
+      --panel: #16263a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header.top { padding: 20px 0; border-bottom: 1px solid var(--line); }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; letter-spacing: .01em; }
+  nav a { margin-left: 20px; color: var(--ink); text-decoration: none; font-size: 15px; }
+  nav a:hover { color: var(--accent); }
+
+  .hero { padding: 64px 0 48px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+  h1 {
+    font: 700 clamp(2.4rem, 6vw, 3.8rem)/1.05 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    margin: 0 0 20px;
+    letter-spacing: -.02em;
+  }
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 34em; margin: 0 0 28px; }
+  .btns { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 11px 20px; border-radius: 6px;
+    border: 2px solid var(--ink); color: var(--ink); text-decoration: none; font-weight: 600;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { opacity: .88; }
+
+  .diagram { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .diagram svg { width: 100%; height: auto; display: block; }
+  .diagram p { margin: 10px 0 0; font-size: 14px; color: var(--muted); }
+  .d-box { fill: var(--panel); stroke: var(--ink); stroke-width: 1.5; }
+  .d-vpc { fill: none; stroke: var(--line); stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .d-hot { stroke: var(--accent); stroke-width: 2; }
+  .d-t { fill: var(--ink); font: 600 12px system-ui, sans-serif; }
+  .d-s { fill: var(--muted); font: 11px system-ui, sans-serif; }
+  .d-line { stroke: var(--ink); stroke-width: 1.5; fill: none; }
+  .packet { fill: var(--accent); }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font: 700 1.7rem/1.2 Georgia, "Iowan Old Style", serif; margin: 0 0 20px; }
+  h3 { margin: 0 0 6px; font-size: 1.15rem; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .item { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 22px; }
+  .item p { margin: 0 0 12px; color: var(--muted); }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+  .tags li { border: 1px solid var(--line); border-radius: 999px; padding: 2px 12px; font-size: 14px; }
+  .prose { max-width: 40em; }
+  dl { margin: 0; display: grid; grid-template-columns: 9em 1fr; gap: 10px 20px; }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  footer { padding: 28px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 760px) {
+    .hero, .two { grid-template-columns: 1fr; }
+    dl { grid-template-columns: 1fr; gap: 2px; }
+    dd { margin-bottom: 12px; }
+    nav a { margin: 0 16px 0 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .packet { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand">Jervil Angelo De Leon</span>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#learning">Learning</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div>
+      <h1>I'm building my path to cloud engineering on AWS, one real project at a time.</h1>
+      <p class="lead">I'm an L1 support specialist for a company HRIS in Makati, studying AWS and Linux with the goal of becoming an infrastructure engineer.</p>
+      <div class="btns">
+        <a class="btn primary" href="DELEON_RESUME_UPDATED.pdf">Download resume</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <figure class="diagram" style="margin:0">
+      <svg viewBox="0 0 360 250" role="img" aria-label="Diagram: a visitor reaches an Nginx web server on EC2 through an internet gateway inside a VPC in Singapore.">
+        <rect class="d-vpc" x="96" y="10" width="258" height="230" rx="10"/>
+        <text class="d-s" x="108" y="28">VPC 10.0.0.0/16, ap-southeast-1</text>
+
+        <rect class="d-box" x="8" y="96" width="70" height="46" rx="6"/>
+        <text class="d-t" x="43" y="116" text-anchor="middle">Visitor</text>
+        <text class="d-s" x="43" y="131" text-anchor="middle">browser</text>
+
+        <rect class="d-box" x="112" y="96" width="70" height="46" rx="6"/>
+        <text class="d-t" x="147" y="116" text-anchor="middle">Internet</text>
+        <text class="d-s" x="147" y="131" text-anchor="middle">gateway</text>
+
+        <rect class="d-vpc" x="204" y="44" width="140" height="180" rx="8"/>
+        <text class="d-s" x="214" y="62">Public subnet</text>
+
+        <rect class="d-box d-hot" x="220" y="90" width="108" height="58" rx="6"/>
+        <text class="d-t" x="274" y="112" text-anchor="middle">EC2 + Nginx</text>
+        <text class="d-s" x="274" y="128" text-anchor="middle">Amazon Linux 2023</text>
+
+        <rect class="d-box" x="220" y="166" width="108" height="40" rx="6"/>
+        <text class="d-t" x="274" y="183" text-anchor="middle">Security group</text>
+        <text class="d-s" x="274" y="197" text-anchor="middle">80 open, SSH my IP</text>
+
+        <path class="d-line" id="route" d="M78 119 H112 M182 119 H220"/>
+        <circle class="packet" r="4" cy="119">
+          <animate attributeName="cx" values="78;220" dur="2.4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+      <figcaption style="font-size:14px;color:var(--muted);margin-top:10px">This page is served from the setup shown above.</figcaption>
+    </figure>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <div class="prose">
+        <p>I work as L1 support for our company's HRIS. I handle user concerns, document what I learn, and escalate what needs deeper attention. I'm new to HR technology, so I research each concept thoroughly after every session to build a solid understanding.</p>
+        <p>Outside of work I study cloud and Linux hands-on. My goal is to become an infrastructure engineer, so I build small, real projects on AWS to practice the skills I'm learning.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="two">
+        <article class="item">
+          <h3>Secure EC2 web server</h3>
+          <p>A Linux web server on AWS that hosts this site. I set up the network from scratch: a custom VPC, public subnet, internet gateway and route table, then locked access down with a security group and an IAM role.</p>
+          <ul class="tags">
+            <li>EC2</li><li>VPC</li><li>Security groups</li><li>IAM</li><li>EBS</li><li>Nginx</li><li>Linux</li>
+          </ul>
+        </article>
+        <article class="item">
+          <h3>HRIS Template Completion Tracker</h3>
+          <p>An automated pipeline that tracks about 29 HR data-collection templates across 9 business units. A scheduled Power Automate flow scans a SharePoint library every day, flags files untouched for more than 7 days as stale, and keeps one row per file in an Excel table. Power BI reads that table for a live completion dashboard.</p>
+          <p>Two details I'm proud of: rows are updated instead of duplicated on every run, and completion is measured per unit against only the templates that apply to it. The flow never modifies the source files, and it only checks when a file was last touched, not what is inside it.</p>
+          <ul class="tags">
+            <li>Power Automate</li><li>SharePoint</li><li>Excel Online</li><li>Power BI</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="learning">
+    <div class="wrap">
+      <h2>Learning</h2>
+      <dl>
+        <dt>AWS Cloud Practitioner</dt>
+        <dd>Studying for the CLF-C02 exam.</dd>
+        <dt>AWS AI Practitioner</dt>
+        <dd>Preparing for the AIF-C01 exam.</dd>
+        <dt>Hands-on focus</dt>
+        <dd>Networking basics, Linux administration, and securing cloud resources.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:deleonangelojervil@gmail.com">deleonangelojervil@gmail.com</a></dd>
+        <dt>LinkedIn</dt>
+        <dd><a href="https://www.linkedin.com/in/jervilangelo/" rel="noopener">linkedin.com/in/jervilangelo</a></dd>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/jervilangelo" rel="noopener">github.com/jervilangelo</a></dd>
+        <dt>Resume</dt>
+        <dd><a href="DELEON_RESUME_UPDATED.pdf">DELEON_RESUME_UPDATED.pdf</a></dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Jervil Angelo De Leon, Makati, Philippines. Hosted on Amazon EC2.</div>
+</footer>
+
+</body>
+</html>
