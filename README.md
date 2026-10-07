@@ -29,7 +29,9 @@ EC2, VPC, Security Groups, IAM, EBS, Linux (Nginx)
 ![EBS snapshot](screenshots/ebs-snapshot.png)
 
 ## Result
-![Live site](screenshots/live-site.png)
+![Live site - top of page](screenshots/live-shot1.png)
+![Live site - projects](screenshots/live-shot2.png)
+![Live site - contact](screenshots/live-shot3.png)
 
 ## How I deployed the site
 1. Connected over SSH using the key pair
